@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <img src="img/logo.png" alt="" class="money-img" />
+    <h1>Exchange Rate Calculator</h1>
+    <p>Choose the currency and the amounts to get the exchange rate.</p>
+    <form onsubmit="calculate(event)">
+        <label for="amount">Amount: </label>
+        <input type="text" id="amount" name="amount">
+        <select name="currency" id="currency"></select><br><br>
+        <label for="exchangeRate">Currency:</label>
+        <select name="exchangeRate" id="exchangeRate"></select><br><br>
+        <input type="submit" value="Convert">
+        <br><br>
+        <label for="result">Result:</label>
+        <input type="text" id="result" name="result">
+        <br><br>
+    </form>
+    <div id="buttons-container">
+        <button onclick="swapFunction()">Swap</button>
+        <button onclick="getAuditData()">Audit Page</button>
+    </div>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

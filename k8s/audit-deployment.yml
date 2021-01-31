@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: audit
+  labels:
+    name: audit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: audit
+  template:
+    metadata:
+      labels:
+        name: audit
+    spec:
+      hostNetwork: true
+      containers:
+      - name: audit
+        image: yousefkh97/audit-service
+        ports:
+        - containerPort: 4002
+      hostname: audit

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: frontend
+  template:
+    metadata:
+      labels:
+        name: frontend
+    spec:
+      hostNetwork: true
+      containers:
+      - name: frontend
+        image: yousefkh97/frontend-service
+        ports:
+        - containerPort: 4000
+      hostname: frontend

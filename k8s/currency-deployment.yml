@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currency
+  labels:
+    name: currency
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: currency
+  template:
+    metadata:
+      labels:
+        name: currency
+    spec:
+      hostNetwork: true
+      containers:
+      - name: currency
+        image: yousefkh97/currency-service
+        ports:
+        - containerPort: 4001
+      hostname: currency
