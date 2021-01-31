@@ -4,16 +4,18 @@ A Simple Project that helps you with currency convert and swap.
 
 
 As a user you can choose the currency you need and the amount in order to convert it to the exchange currency.
+
 After you choose , you can click on convert button to get the result. 
+
 Also, you have the choice to see all the logs using the Audit Button. In this table you can see the time for the action and all related information.
  
 
 # how to run in terraform:  
-git clone https://github.com/mohamedgalia/currency_swap.git  
-cd currency_swap  
+git clone https://github.com/Yousefkh97/currency_project.git  
+cd currency_project  
 go to main.tf file  
-change the key name in line 179 "key_name = "gazal"" to your Keypair name in your aws  
-add your privte key file to the folder and set it in line 239 (./gazal.pem)  
+Change the key name in line 176 to your Keypair name in your aws  
+Add your privte key file to the folder and set it in line 239 (./test.pem)  
 set your access_key and secret_key of aws in variables.tf file in access_key_var and secret_key_var  
 terraform init  
 terraform apply
