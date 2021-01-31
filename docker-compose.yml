@@ -1,0 +1,20 @@
+version: '3'
+services:
+  front-end:
+    # The name of the image in DockerHub.
+    image: yousefkh97/frontend-service
+    # Mapping of container port to host
+    ports:
+      - "4000:4000"
+  currency:
+    # The name of the image in DockerHub.
+    image: yousefkh97/currency-service
+    # Mapping of container port to host
+    ports:
+      - "4001:4001"
+  audit:
+    # The name of the image in DockerHub.
+    image: yousefkh97/audit-service
+    # Mapping of container port to host
+    ports:
+      - "4002:4002"
